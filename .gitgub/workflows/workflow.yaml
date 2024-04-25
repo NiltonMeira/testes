@@ -1,12 +1,13 @@
-name: {Continuos Deploy}
+name: Continuos Deploy
 
-on: {(pull_request)}
+on: pull_request
 
 jobs: 
   continuos-integration:
     runs-on: windowns-latest
     strategy:
-      mongodb-version: [4.2]
+      matrix:
+        mongodb-version: [4.2]
 
 steps:
   - uses: actions/checkout@v3
