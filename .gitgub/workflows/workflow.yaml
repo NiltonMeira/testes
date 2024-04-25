@@ -1,6 +1,6 @@
 name: Continuos Deploy
 
-on: pull_request
+on: push
 
 jobs: 
   continuos-integration:
