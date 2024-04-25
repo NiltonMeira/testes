@@ -1,16 +1,19 @@
 name: Continuos Deploy
 
-on: push
+
+on: pull_request
 
 jobs: 
   continuos-integration:
-    runs-on: windows-latest
+    runs-on: windowns-latest
     strategy:
       matrix:
         mongodb-version: [4.2]
 
-    steps:
-      - uses: actions/checkout@v3
+
+    steps: 
+      - uses: actions/checkout@v3 
+
       - name: Using Node.js
         uses: actions/setup-node@v2
         with:
